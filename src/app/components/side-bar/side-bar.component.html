@@ -1,0 +1,16 @@
+<div>
+  <h2>
+    Filters
+  </h2>
+  <form [formGroup]="filterForm">
+    <div class="fl-grp" *ngFor="let filter of filterList">
+      <h3 class="ml5">{{filter.type}}</h3>
+      <div class="fl" *ngFor="let filterNames of filter.list;let i = index" [formArrayName]="filter.type">
+        <input type="checkbox" [formControlName]="i" [id]="filter.type +'_'+ filterNames.id" />
+        <label [for]="filter.type +'_'+ filterNames.id">
+          {{filterNames.name}}
+        </label>
+      </div>
+    </div>
+  </form>
+</div>
