@@ -1,1 +1,1 @@
-web: npm run build:ssr
+web: npm start
