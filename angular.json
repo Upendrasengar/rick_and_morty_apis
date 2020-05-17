@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rmCastApp": {
+    "rickAndMortyApps": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "rmCastApp:build"
+            "browserTarget": "rickAndMortyApps:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "rmCastApp:build:production"
+              "browserTarget": "rickAndMortyApps:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rmCastApp:build"
+            "browserTarget": "rickAndMortyApps:build"
           }
         },
         "test": {
@@ -114,18 +114,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "rmCastApp:serve"
+            "devServerTarget": "rickAndMortyApps:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "rmCastApp:serve:production"
+              "devServerTarget": "rickAndMortyApps:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "rmCastApp",
+  "defaultProject": "rickAndMortyApps",
   "cli": {
     "analytics": false
   }
