@@ -1,0 +1,63 @@
+@import ./assets/css/partials/mixings
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  outline: none
+
+html
+  font-size: 100%
+  width: 100%
+
+body
+  font: 100% $font-stack
+  font-size: 14px
+  color: $primary-color
+  background: #f0f0f0
+  font-weight: normal
+  word-wrap: break-word
+  font-kerning: normal
+  @include  crossBrowser("font-feature-settings",""kern", "liga", "clig", "calt"")
+
+input[type='text'],
+input[type='button']
+  padding: 5px
+  width: 284px
+  border-radius: 5px 5px
+  height: 30px
+  margin: 5px
+  font-size: 1rem
+
+input[type='text']
+  box-sizing: content-box
+  padding: 0.12rem
+  padding-left: 10px
+  font-size: 1rem
+  line-height: 1.5
+  color: #495057
+  background-color: #fff
+  background-clip: padding-box
+  border: 1px solid #ced4da
+  border-radius: 0.25rem
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+
+input[type='button']
+  margin: 5px
+  width: auto
+  color: nth($colours,1)
+input[type='button']:not(:disabled):not(.disabled)
+  cursor: pointer
+.btn-prm
+  background-color: #007bff
+  border-color: #007bff
+.btn-sec
+  background-color: #6c757d
+  border-color: #6c757d
+.btn-suc
+  background-color: #28a745
+  border-color: #28a745
+.btn-link
+  font-weight: 400
+  color: #007bff
+  background-color: transparent

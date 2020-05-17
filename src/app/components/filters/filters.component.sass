@@ -1,0 +1,47 @@
+.tag
+  min-width: 80px
+  background: #2a91ff
+  color: white
+  text-align: center
+  padding: 4px
+  border-radius: 5px 5px
+  text-overflow: ellipsis
+  display: inline-block
+  margin: 5px
+  &.search
+    background: #28a745
+  &.Gender
+    background: #17a2b8
+  &.Origin
+    background: #6c757d
+  &:after
+    content: "x"
+    float: right
+    color: #000
+    margin: 0 5px
+    cursor: pointer
+.sel-fl-grp
+  min-height: 56px
+.form-group.filters
+  display: flex
+  justify-content: space-between
+  @media only screen and (max-width: 767px)
+    flex-direction: column
+    .form-control
+      width: 100%
+      margin: 10px 0
+      box-sizing: border-box
+      height: 35.8px
+  select
+    height: 35.81px
+    width: 250px
+    border: 1px solid #ced4da
+    margin: 0.25rem
+    @media only screen and (max-width: 767px)
+      width: 100%
+      margin: 10px 0
+      border: 1px solid #ced4da
+      border-radius: 0.25rem
+@media only screen and (max-width: 767px)
+  .btn-sec
+    display: none !important

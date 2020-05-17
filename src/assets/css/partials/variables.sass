@@ -1,0 +1,19 @@
+$font-stack: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol'
+
+$primary-color: #3c3e44
+
+$colours: #fff, #FF0000,  #001EFF, #00FF00,  #F6FF00
+
+$spaceamounts: (0, 5,6, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100)
+
+$sides: ("": "all", "t": "top", "b": "bottom", "l": "left", "r": "right")
+
+@each $space in $spaceamounts
+  @each $prefix, $value in $sides
+    $property: if($prefix == '', '', -#{$value})
+    .m#{$prefix}#{$space}
+      margin#{$property}: #{$space}px
+    .p#{$prefix}#{$space}
+      padding#{$property}: #{$space}px
+
+// @forward 'variables' as variables-*

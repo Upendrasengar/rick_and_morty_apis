@@ -1,0 +1,29 @@
+<div>
+  <h2>
+    Selected Filters
+  </h2>
+  <div class="sel-fl-grp">
+    <span class="tag" *ngFor="let filter of activeFilters; let i = index" [ngClass]="filter.type"
+      (click)="removeFilter(filter, i)">{{filter.name}}</span>
+  </div>
+  <div class="">
+    <div class="ml5">
+      Search by Name
+    </div>
+    <form [formGroup]="searchForm">
+      <div class="form-group filters">
+        <div>
+          <input type="text" formControlName="search" autocomplete="off" class="form-control" name="search">
+          <input type="button" class="btn-sec" (click)="searchByName(searchForm.controls.search.value)"
+            value="Search" />
+        </div>
+        <select name="orderBy" formControlName="orderBy">
+          <option value="" disabled selected>Sort By ID</option>
+          <option value="asc">Ascending</option>
+          <option value="desc">Descending</option>
+        </select>
+      </div>
+    </form>
+    <div>
+    </div>
+  </div>
