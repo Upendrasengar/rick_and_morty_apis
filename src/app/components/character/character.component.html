@@ -1,0 +1,31 @@
+<div class="_pf">
+    <div class="ac">
+      <img [src]="profile.image" class="avatar">
+      <div class="name-header">
+        <h3 [innerText]="profile.name"></h3>
+        <span [innerText]="profile.created | date"></span>
+      </div>
+    </div>
+    <div class="profile-bio">
+      <div>
+        <span>Status</span>
+        <span [innerText]="profile.status"></span>
+      </div>
+      <div>
+        <span>Species</span>
+        <span [innerText]="profile.species"></span>
+      </div>
+      <div>
+        <span>Gender</span>
+        <span [innerText]="profile.gender"></span>
+      </div>
+      <div>
+        <span>Origin</span>
+        <span [innerText]="profile.origin?.name"></span>
+      </div>
+      <div>
+        <span>Last Location</span>
+        <span [innerText]="profile.location?.name"></span>
+      </div>
+    </div>
+  </div>
