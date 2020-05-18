@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { AppService } from 'src/app/services/app.service';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
@@ -13,6 +13,7 @@ export class FiltersComponent implements OnInit {
   activeFilters = [];
   isSearchActive = null;
   searchForm: FormGroup;
+  @ViewChild("searchBtn", { read: ElementRef }) searchBtn: ElementRef;
   constructor(
     private appService: AppService,
     private fm: FormBuilder
@@ -43,7 +44,7 @@ export class FiltersComponent implements OnInit {
       debounceTime(400),
       distinctUntilChanged()
     ).subscribe(value => {
-      if (window.matchMedia('screen and (max-width: 767px)').matches) {
+      if (!this.searchBtn.nativeElement.offsetParent) {
         if (!value) {
           const index: any = this.activeFilters.findIndex(e =>
             e.type === "search");
@@ -86,7 +87,7 @@ export class FiltersComponent implements OnInit {
         });
       }
     }
-    if (!window.matchMedia('screen and (max-width: 767px)').matches) {
+    if (this.searchBtn && this.searchBtn.nativeElement.offsetParent) {
       this.searchForm.controls.search.setValue('');
     }
     this.appService.updateActiveFilters(this.activeFilters);

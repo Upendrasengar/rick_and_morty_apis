@@ -14,7 +14,7 @@
       <div class="form-group filters">
         <div>
           <input type="text" formControlName="search" autocomplete="off" class="form-control" name="search">
-          <input type="button" class="btn-sec" (click)="searchByName(searchForm.controls.search.value)"
+          <input type="button" #searchBtn class="btn-sec" (click)="searchByName(searchForm.controls.search.value)"
             value="Search" />
         </div>
         <select name="orderBy" formControlName="orderBy">
