@@ -20,11 +20,11 @@ export class ArrayFilterPipe implements PipeTransform {
       const keys = Object.keys(fList);
       keys.forEach(key => {
         info = info.filter(val => {
-          if (key == "origin") {
+          if (key === 'origin') {
             return ~fList[key].indexOf(val.origin.name);
           }
-          else if (key == "search") {
-            return ~val.name.toLowerCase().indexOf(fList[key].map(e=>e.toLowerCase()));
+          else if (key === 'search') {
+            return ~val.name.toLowerCase().indexOf(fList[key].map(e => e.toLowerCase()));
           }
           return ~fList[key].indexOf(val[key]);
         });
