@@ -1,0 +1,39 @@
+
+.ac
+    position: relative
+    overflow: hidden
+    .name-header
+        position: absolute
+        bottom: 0px
+        background: #3d3e44d6
+        width: 100%
+        height: auto
+        padding: 10px 0
+        @media (min-width: 768px) and (max-width: 1024px)
+            padding: 4px 0
+            font-size: 12px
+img.avatar
+    width: 100%
+    transition: transform .5s
+    &:hover
+        transform: scale(1.5)
+._pf
+    padding: 10px
+    @media (min-width: 768px) and (max-width: 1024px)
+        padding: 4px
+div.profile-bio div span
+    width: 50%
+    display: inline-block
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    @media (min-width: 768px) and (max-width: 1024px)
+        width: 100%
+        display: block
+div.profile-bio span:first-child
+    color: rgb(158, 158, 158)
+div.profile-bio span:last-child
+    text-align: right
+    color: #c99723
+    @media (min-width: 768px) and (max-width: 1024px)
+        text-align: left

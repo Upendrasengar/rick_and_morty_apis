@@ -11,6 +11,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { FiltersComponent } from './components/filters/filters.component';
 import { ContainerComponent } from './components/container/container.component';
 import { ArrayFilterPipe } from './pipes/array-filter.pipe';
+import { CharacterComponent } from './components/character/character.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ArrayFilterPipe } from './pipes/array-filter.pipe';
     SideBarComponent,
     FiltersComponent,
     ContainerComponent,
+    CharacterComponent,
     ArrayFilterPipe
   ],
   imports: [
