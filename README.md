@@ -1,4 +1,4 @@
-# Rick and Morty APIs demo
+# Rick and Morty APIs demo (With Angular Unviversal - Server Side Rendering)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
 
