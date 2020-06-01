@@ -16,6 +16,7 @@ describe('CharacterComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CharacterComponent);
     component = fixture.componentInstance;
+    component.profile = {};
     fixture.detectChanges();
   });
 
